@@ -11,16 +11,20 @@ function caesarCipher(str,num){
         }
     let currentIndex = alphabet.indexOf(currentLetter)
     let newIndex = currentIndex + num
+    
 
-    if(newIndex > 25) newIndex = newIndex - 26
-    if(newIndex < 0) newIndex = newIndex + 26
-    else{
-        newStr += alphabet[newIndex]
-        
+    if(newIndex > 25)newIndex = newIndex - 26
+    if(newIndex < 0)newIndex = newIndex + 26
+    if(str[i]===str[i].toUpperCase()){
+        newStr+=alphabet[newIndex].toUpperCase()
     }
+
+    else newStr += alphabet[newIndex]
+    
     //end of for loop i
+    console.log('newIndex',newIndex)
     }  
     console.log('newStr',newStr)
  //end of function   
 }
-caesarCipher('aoai-jrlkamAKLRFAKklam-lakmdscam-ALDA',-4)
+caesarCipher('akjenfnaAM-njkasdIA--jnka',12)
